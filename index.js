@@ -26,13 +26,19 @@ const displayEntries = () => {
 		.join("\n");
 
 	const table = `<table>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Password</th>
-    <th>dob</th>
-    <th>acceptedTerms</th>
-    
-    <tr>${tableEntries}</tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Date of Birth</th>
+                <th>Accepted Terms</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${tableEntries}
+        </tbody>
+    </table>
     `;
 	let details = document.getElementById("userEntries");
 	details.innerHTML = table;
