@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<script src="form.js" async></script>
+		<style>
+			/* Basic reset for margins and padding */
+			body,
+			h2,
+			form,
+			div {
+				margin: 0;
+				padding: 0;
+			}
+
+			/* Style the body */
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f4f4f4;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column; /* Align items in column direction */
+				height: 100vh;
+				padding: 20px; /* Add padding around the body */
+			}
+
+			/* Style the form container */
+			form {
+				background-color: #ffffff;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				padding: 20px;
+				max-width: 400px;
+				width: 100%;
+				margin-bottom: 20px; /* Add margin to separate from the entries section */
+				margin-top: 3rem;
+			}
+
+			/* Style form labels and inputs */
+			label {
+				display: block;
+				margin: 10px 0 5px;
+				font-weight: bold;
+			}
+
+			input[type="text"],
+			input[type="email"],
+			input[type="password"],
+			input[type="date"] {
+				width: 100%;
+				padding: 8px;
+				margin-bottom: 15px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+			}
+
+			input[type="checkbox"],
+			input[type="radio"] {
+				margin-right: 5px;
+			}
+
+			button {
+				background-color: #007bff;
+				color: #ffffff;
+				border: none;
+				padding: 10px 15px;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size: 16px;
+			}
+
+			button:hover {
+				background-color: #0056b3;
+			}
+
+			/* Style the entries section */
+			#userEntries {
+				background-color: #ffffff;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				padding: 20px;
+				max-width: 600px;
+				width: 100%;
+			}
+
+			/* Style the entries header */
+			h2 {
+				margin-bottom: 10px;
+			}
+			#name:invalid:focus {
+				border: 1px solid red;
+				outline: none;
+			}
+			#email:invalid:focus {
+				outline: none;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="user-form">
+			<h2>Registration Form</h2>
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name" required /><br />
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" required /><br />
+			<label for="password">Password</label>
+			<input
+				type="password"
+				name="password"
+				id="password"
+				required
+			/><br />
+			<label for="dob">Date of Birth</label>
+			<input type="date" id="dob" name="dob" required /><br />
+
+			<input type="checkbox" name="acceptTerms" id="acceptTerms" />
+			<label for="acceptTerms"required>Accept terms and conditions</label
+			><br />
+
+			<button type="submit">Submit</button>
+		</form>
+		<div>
+			<h2>Entries</h2>
+			<div id="userEntries"></div>
+		</div>
+	</body>
+</html>
