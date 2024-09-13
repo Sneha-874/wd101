@@ -30,7 +30,7 @@ const displayEntries = () => {
     <th>Email</th>
     <th>Password</th>
     <th>Dob</th>
-    <th>Accepted Terms?</th>
+    <th>Accepted terms?</th>
     
     <tr>${tableEntries}</tr>
     </table>
